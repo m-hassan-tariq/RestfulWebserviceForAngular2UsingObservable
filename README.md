@@ -331,7 +331,8 @@ Angular injects a WebApiObservableService into the constructor and the component
           constructor(private http: Http,
               private toasterService: ToasterService,
               private loaderService: LoaderService) {
-              this.headers = new Headers({ 'Content-Type': 'application/json', 'Accept': 'q=0.8;application/json;q=0.9' });
+              this.headers = new Headers({ 'Content-Type': 'application/json', 
+                                        'Accept': 'q=0.8;application/json;q=0.9' });
               this.options = new RequestOptions({ headers: this.headers });
           }
 
