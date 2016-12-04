@@ -290,11 +290,11 @@ In the headers object, the Content-Type specifies that the body represents JSON.
 In the return statement, options is the third argument of the post method, as shown above.
 
         ngOnInit() {
-            let headers = new Headers();
-            headers.append('Accept', 'q=0.8;application/json;q=0.9');
-            return this.http.get(this.url, { headers: headers } ).map(res => {
-                      return res.json();
-                    }).subscribe((response) => { console.log(response) });
+        let headers = new Headers();
+        headers.append('Accept', 'q=0.8;application/json;q=0.9');
+        return this.http.get(this.url, { headers: headers } )
+                   .map(data => console.log(data.json()))
+                   .subscribe(err => console.log(err));
         }
 
 -----
