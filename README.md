@@ -70,12 +70,12 @@ The Http.get method takes an object that implements RequestOptionsArgs as a seco
             
      **Consumer Code in _custom component_**:
      
-       this.movieObservableService
-          .getService('api/Movie/TestGetNo')
-          .subscribe(
-              result => console.log(result),
-              error => this.errorMessage = <any>error
-        );
+               this.movieObservableService
+                  .getService('api/Movie/TestGetNo')
+                  .subscribe(
+                      result => console.log(result),
+                      error => this.errorMessage = <any>error
+                );
             
 * #### HTTP GET using Observable with single query string term
 
