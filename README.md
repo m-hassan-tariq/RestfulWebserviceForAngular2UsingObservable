@@ -3,7 +3,7 @@ Restful implementation of GET, POST, DELETE, PATCH, PUT in Angular2 using Observ
 
 The Angular Http client communicates with the server using a familiar HTTP request/response protocol. The Http client is one of a family of services in the Angular HTTP library. When importing from the @angular/http module, SystemJS knows how to load services from the Angular HTTP library because the systemjs.config.js file maps to that module name. The HttpModule is necessary for making HTTP calls.
 
-Benefits of using Global Service (web-api-observable.service.ts)
+Benefits of using Global Service (web-api-observable.service.ts):
 
 * This will contain shared/global service which will be consumed by all modules for executing CRUD operation, Request Type, URL, Parameter Object will be passed to this shared service, so it will make code more maintainable, readable and scalable
 
@@ -15,6 +15,8 @@ Benefits of using Global Service (web-api-observable.service.ts)
 
 * We don’t need to mention protocol and host-name now in every URL request.
 
+----
+
 ### Observable
 
 Think of an Observable as a stream of events published by some source. To listen for events in this stream, subscribe to the Observable. These subscriptions specify the actions to take when the web request produces a success event or a fail event (with the error in the payload).
@@ -23,6 +25,8 @@ Think of an Observable as a stream of events published by some source. To listen
 
 * The errorHandler forwards an error message as a failed promise instead of a failed observable.
 
+-----
+
 ### Observable vs Promises 
 
 The less obvious but critical difference is that these two methods return very different results.
@@ -30,6 +34,8 @@ The less obvious but critical difference is that these two methods return very d
 * The **promise-based** then returns another promise. You can keep chaining more then and catch calls, getting a new promise each time.
 
 * The **subscribe method** returns a Subscription. A Subscription is not another Observable. It's the end of the line for observables. You can't call map on it or call subscribe again. The Subscription object has a different purpose, signified by its primary method, unsubscribe.
+
+-----
 
 ### RxJS library
 
@@ -46,6 +52,8 @@ The less obvious but critical difference is that these two methods return very d
 * You could add every RxJS operator with a single import statement. While that is the easiest thing to do, you'd pay a penalty in extended launch time and application size because the full library is so big.
 
 * Since this app only uses a few operators, it's better to import each Observable operator and static class method, one-by-one, for a custom Observable implementation tuned precisely to the app's requirements. Put the import statements in one app/rxjs-operators.ts file.
+
+-----
 
 ### HTTP GET Code (web-api-observable.service.ts)
 
@@ -288,6 +296,8 @@ In the return statement, options is the third argument of the post method, as sh
                       return res.json();
                     }).subscribe((response) => { console.log(response) });
         }
+
+-----
 
 ## Restful HTTP Service using Observable
 
