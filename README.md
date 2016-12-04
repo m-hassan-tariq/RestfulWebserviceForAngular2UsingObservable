@@ -55,7 +55,7 @@ The less obvious but critical difference is that these two methods return very d
 
 -----
 
-### HTTP GET Code (web-api-observable.service.ts)
+## HTTP GET Code (web-api-observable.service.ts)
 
 The Http.get method takes an object that implements RequestOptionsArgs as a second parameter.
 
@@ -162,7 +162,7 @@ The Http.get method takes an object that implements RequestOptionsArgs as a seco
                 error => this.errorMessage = <any>error
         );
 
-### HTTP POST Producer Code (web-api-observable.service.ts)
+## HTTP POST Producer Code (web-api-observable.service.ts)
 
 The Http.post method takes body as second parameter and an object that implements RequestOptionsArgs as a third parameter.
 
@@ -185,7 +185,7 @@ The Http.post method takes body as second parameter and an object that implement
                 error => this.errorMessage = <any>error
         );
 
-### HTTP PUT Producer Code (web-api-observable.service.ts)
+## HTTP PUT Producer Code (web-api-observable.service.ts)
 
 The Http.put method takes body as second parameter and an object that implements RequestOptionsArgs as a third parameter.
 
@@ -208,7 +208,7 @@ The Http.put method takes body as second parameter and an object that implements
                 error => this.errorMessage = <any>error
         );
 
-### HTTP PATCH Producer Code (web-api-observable.service.ts)
+## HTTP PATCH Producer Code (web-api-observable.service.ts)
 
 The Http.patch method takes body as second parameter and an object that implements RequestOptionsArgs as a third parameter.
 
@@ -231,7 +231,7 @@ The Http.patch method takes body as second parameter and an object that implemen
                 error => this.errorMessage = <any>error
         );
         
-### HTTP DELETE Producer Code (web-api-observable.service.ts)
+## HTTP DELETE Producer Code (web-api-observable.service.ts)
 
 The Http.delete method takes an object that implements RequestOptionsArgs as a second parameter.
 
@@ -299,7 +299,7 @@ In the return statement, options is the third argument of the post method, as sh
 
 -----
 
-## Restful HTTP Service using Observable
+# Restful HTTP Service using Observable
 
 Angular injects a WebApiObservableService into the constructor and the component calls that service to fetch and save data. The component does not talk directly to the Angular Http client. The component doesn't know or care how it gets the data. It delegates to the WebApiObservableService. **This is a golden rule: always delegate data access to a supporting service class.**
 
